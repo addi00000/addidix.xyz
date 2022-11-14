@@ -476,12 +476,49 @@ body {
 
 /* End: Projects */
 
+/* Begin: Scroll-up */
+.scroll-up {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+    background-color: var(--dark-Color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--secondary-Color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-up:hover {
+    transform: scale(1.05);
+}
+
+.scroll-up i {
+    color: var(--text-Color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.scroll-up i:hover {
+    color: var(--primary-Color);
+}
+/* End: Scroll-up */
+
 /* Begin: Footer */
 .footer-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;   
+    width: 100vw; 
 }
 
 .footer {
