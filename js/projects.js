@@ -1,9 +1,8 @@
-
 fetch("https://gh-pinned-repos.egoist.dev/?username=addi00000")
-    .then((response) => response.json())
-    .then((data) => {
-        data.forEach((repo) => {
-            document.getElementsByClassName("projects")[0].innerHTML += `
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((repo) => {
+      document.getElementsByClassName("projects")[0].innerHTML += `
                 <div class="project">
                     <div class="project-title">
                         <a href="${repo.link}">${repo.repo}</a>
@@ -17,5 +16,5 @@ fetch("https://gh-pinned-repos.egoist.dev/?username=addi00000")
                     </div>
                 </div>
             `;
-        });
-});
+    });
+  });
