@@ -1,8 +1,27 @@
-window.addEventListener('load', () => {
-    const preload = document.querySelector('.preload');
-    preload.classList.add('preload-finish');
-});
+const canvas = document.getElementById('animation');
+const renderer = new THREE.WebGLRenderer({canvas});
+const camera = new THREE.PerspectiveCamera(75, 2, 0.1, 5);
+const scene = new THREE.Scene();
+camera.position.z = 2;
 
-window.onload = function() {
-    window.scrollTo(0, 0);
+const geometry = new THREE.SphereGeometry(1, 12, 12);
+const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+cube.material.color.set(getComputedStyle(document.documentElement).getPropertyValue('--primary-Color'));
+renderer.setClearColor(0x000000, 0);
+
+function render(time) {
+    time *= 0.001;
+    cube.rotation.x = time;
+    cube.rotation.y = time;
+    renderer.render(scene, camera);
+    requestAnimationFrame(render);
 }
+requestAnimationFrame(render);
+
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preload');
+    setTimeout(() => { preloader.classList.add('preload-finish'); }, 300);
+});

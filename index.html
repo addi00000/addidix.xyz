@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <script defer src="js/trail.js"></script>
+        <script defer src="js/cursor.js"></script>
         <script defer src="js/lanyard.js"></script>
         <script defer src="js/preloader.js"></script>
         <script defer src="js/typewriter.js"></script>
@@ -16,7 +16,9 @@
         <script defer src="js/scrollActions.js"></script>
         <script defer src="js/title.js"></script>
         <script defer src="js/footerTime.js"></script>
+
         <script src="https://cdn.jsdelivr.net/gh/xaronnn/js-lanyard/lanyard.js"></script>
+        <script src="https://threejs.org/build/three.js"></script>
     </head>
     <body>
         <div class="preload">
@@ -24,9 +26,7 @@
                 <div class="preload__container__text">
                     <h1>Loading...</h1>
                     <p>Get ready for crazy shit</p>
-                </div>
-                <div class="preload__container__progress">
-                    <div class="preload__container__progress__bar"></div>
+                    <canvas id="animation"></canvas>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div class="lanyard-wrapper">
                 <img alt="Profile Picture" class="lanyard-profile-picture">
                 <div class="column">
-                    <a href="https://discord.com/users/1037686160622878771" class="lanyard-username-anchor">
+                    <a href="https://discord.gg/pj9gDrZY" class="lanyard-username-anchor">
                         <div class="lanyard-username"></div>
                     </a>
                     <div class="lanyard-activity"></div>
@@ -91,10 +91,6 @@
                 <div class="left-column">
                     <span class="current-date"></span>
                     <span class="current-time"></span>
-                    
-                    <script>
-           
-                    </script>
                 </div>
                 <div class="right-column">
                     <p class="rights">© 2022 Created By <b>Addidix</b>  All Rights Reserved.</p>

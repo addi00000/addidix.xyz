@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
 
 :root {
-    --dark-Color: #191821;
-    --darkish-Color: #2c2a4a;
-    --primary-Color: #f5edff;
-    --secondary-Color: #1e1f35;
-    --text-Color: #b3a8d7;
-    --light-Color: #bfefff;
-    
+    --dark-Color: hsl(247, 16%, 4%);
+    --darkish-Color: hsl(244, 28%, 13%);
+    --primary-Color: hsl(267, 100%, 86%);
+    --secondary-Color: hsl(237, 28%, 6%);
+    --text-Color: hsl(254, 37%, 65%);
+    --light-Color: hsl(256, 37%, 86%);
 }
 
 html {
@@ -34,12 +33,16 @@ body {
 }
 
 /* Begin: Trailer */
-.trail { 
+.cursor { 
+    pointer-events: none;
     position: absolute;
-    height: 6px; width: 6px;
+    height: 16px; width: 16px;
     border-radius: 50%;
-    background: var(--primary-Color);
-    z-index: 999;
+    box-shadow: 0 0 0 3px var(--primary-Color);
+    background: transparent;
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    transition: transform 0.1s ease, border-radius 0.25s ease;
 }
 /* End: Trailer */
 
@@ -83,20 +86,8 @@ body {
     font-weight: 600;
 }
 
-.preload__container__progress {
-    margin-top: 2rem;
-    width: 100%;
-    height: 10px;
-    background-color: var(--darkish-Color);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.preload__container__progress__bar {
-    height: 100%;
-    background-color: var(--primary-Color);
-    width: 0%;
-    transition: all 1s ease-in-out;
+.preload__container__text canvas {
+    height: 200px;
 }
 /* End: Preload */
 
@@ -276,7 +267,7 @@ body {
 }
 
 .title {
-    background-image: linear-gradient( 109.6deg,  rgba(247,253,166,1) 11.2%, rgba(128,255,221,1) 57.8%, rgba(255,128,249,1) 85.9% );
+    background-image: linear-gradient( 109.6deg,  hsla(64, 96%, 82%, 1) 11.2%, hsla(164, 100%, 75%, 1) 57.8%, hsla(303, 100%, 75%, 1) 85.9% );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -305,7 +296,7 @@ body {
 
 .subtitle span {
     
-    background-image: linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);
+    background-image: linear-gradient(to right, hsl(313, 35%, 69%) 0%, hsl(49, 35%, 78%)  51%, hsl(313, 35%, 69%)  100%);
     background-size: 200% auto;
     transition: all 0.3s ease;
     -webkit-background-clip: text;
@@ -370,7 +361,7 @@ body {
     font-size: 3rem;
     font-weight: 800;
 
-    background-image: linear-gradient( 112.9deg,  rgba(112,255,151,1) 6.2%, rgba(70,195,255,1) 99.7% );
+    background-image: linear-gradient( 112.9deg,  hsla(136, 100%, 72%, 1) 6.2%, hsla(199, 100%, 64%, 1) 99.7% );
     background-size: 250% auto;
     transition: all 0.3s ease;
     -webkit-background-clip: text;
