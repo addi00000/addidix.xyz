@@ -9,7 +9,7 @@ const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true})
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
-cube.material.color.set(getComputedStyle(document.documentElement).getPropertyValue('--primary-Color'));
+cube.material.color.setHex(0xd8b8ff);
 renderer.setClearColor(0x000000, 0);
 
 function render(time) {
