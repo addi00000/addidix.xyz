@@ -23,5 +23,5 @@ requestAnimationFrame(render);
 
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preload');
-    setTimeout(() => { preloader.classList.add('preload-finish'); }, 300);
+    setTimeout(() => { preloader.classList.add('preload-finish'); }, 0);
 });
