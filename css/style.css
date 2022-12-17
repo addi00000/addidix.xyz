@@ -176,6 +176,8 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--secondary-Color);
+
+    transition: all 0.2s ease-in-out;
 }
 
 .lanyard-wrapper {
@@ -248,6 +250,17 @@ body {
         display: none;
     }
 }
+
+.scrolled {
+    /* shrink and make half transparent */
+    height: 3rem;
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 5px solid var(--secondary-Color);
+}
+
 /* End: Navbar */
 
 /* Begin: Title */
@@ -560,39 +573,4 @@ body {
 .right-column p b {
     color: var(--primary-Color);
 }
-
-.right-column p b:hover {
-    color: var(--secondary-Color);
-}
-
-.right-column .tooltip {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.5rem;
-    background-color: var(--dark-Color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--secondary-Color);
-    border-radius: 0.5rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.right-column .tooltip::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 0.5rem solid transparent;
-    border-top-color: var(--dark-Color);
-}
-
-.right-column .tooltip.active {
-    opacity: 1;
-    visibility: visible;
-}
-
 /* End: Footer */

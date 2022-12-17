@@ -20,8 +20,8 @@ window.addEventListener('scroll', () => {
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.backgroundColor = 'transparent';
+        navbar.classList.remove('scrolled');
     }
 });
